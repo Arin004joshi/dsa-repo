@@ -12,7 +12,8 @@ public:
             }
 
             for (int col = 0; col < n; col++) {
-                if (cols.count(col) || diag1.count(row - col) || diag2.count(row + col))
+                if (cols.count(col) || diag1.count(row - col) ||
+                    diag2.count(row + col))
                     continue;
 
                 // place queen
