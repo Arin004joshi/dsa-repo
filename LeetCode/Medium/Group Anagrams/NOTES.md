@@ -1,8 +1,8 @@
 
           # Group Anagrams
 
-          **Summary:** The code uses ArrayLists and boolean arrays to group anagrams.  It iterates through the input array of strings, using a nested loop to compare each string with the others.  The `isAnagram` helper function, utilizing character arrays and sorting, determines if two strings are anagrams.  Strings identified as anagrams are grouped together in a list of lists.
+          **Summary:** The algorithm utilizes an ArrayList of ArrayLists of Strings to store the grouped anagrams and a boolean array to track visited strings. It iterates through the input array of strings. For each unvisited string, it creates a group, adds the string to the group, marks it as visited, and then checks the remaining strings for anagrams using a helper function. Anagrams are added to the group and marked as visited. Finally, the list of groups is returned.
 
-          - Time Complexity: O(n*m*log(m)) where n is the length of the input array and m is the maximum length of a string. The nested loops contribute O(n^2), and sorting each string in `isAnagram` adds O(m*log(m)) for each comparison.
-          - Space Complexity: O(n*m) where n is the number of strings and m is the maximum length of a string.  The space is dominated by the result list, which can grow up to the size of the input array if each string is unique. The auxiliary arrays used in `isAnagram` are of length m
+          - Time Complexity: O(m*n*log m), where n is the number of strings and m is the maximum length of a string. The nested loops contribute O(n^2), and sorting each string within isAnagram() takes O(m log m) time.
+          - Space Complexity: O(n*m), where n is the number of strings and m is the maximum length of a string. The space is primarily used to store the result list which can hold up to n strings, each of length m in the worst case.
           
